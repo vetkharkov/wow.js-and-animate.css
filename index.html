@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+<!--Подключаем скрипт-->
+    <script src="wow.min.js"></script>
+<!--Необходимо инициализировать скрипт-->
+    <script>
+        new WOW().init();
+    </script>
+    <title>Animate.css + WOW.js</title>
+</head>
+
+<body>
+<div class="main">
+    <h1>WOW.js + Animate.css</h1>
+
+    <h3>fadeInRight</h3>
+    <img class="wow fadeInRight animated" src="images/dog1.jpg" alt="">
+    <p><em>class="wow fadeInLeft"</em></p>
+
+    <h3>zoomInUp</h3>
+    <img class="wow zoomInUp animated" data-wow-offset="200" src="images/dog2.jpg" alt="">
+    <p><em>class="wow zoomInUp" data-wow-offset="200"</em></p>
+
+    <h3>flipInX</h3>
+    <img class="wow flipInX" data-wow-offset="200" src="images/dog3.jpg" alt="">
+    <p><em>class="wow flipInX" data-wow-offset="200"</em></p>
+
+    <h3>flipInY</h3>
+    <img class="wow flipInY" data-wow-offset="200" src="images/dog4.jpg" alt="">
+    <p><em>class="wow flipInY" data-wow-offset="200"</em></p>
+
+    <h3>Кучка</h3>
+    <div class="dogs">
+        <img class="wow zoomInUp" data-wow-offset="200" data-wow-delay="0.5s" data-wow-duration="2s" src="images/dog1.jpg" alt="">
+        <img class="wow zoomInUp" data-wow-offset="200" data-wow-delay="1.5s" data-wow-duration="1.5s" src="images/dog2.jpg" alt="">
+        <img class="wow zoomInUp" data-wow-offset="200" data-wow-delay="2s" data-wow-duration="1s" src="images/dog3.jpg" alt="">
+    </div>
+
+    <h3>zoomInDown</h3>
+    <img class="wow zoomInDown" data-wow-offset="200" src="images/dog5.jpg" alt="">
+    <p><em>class="wow zoomInDown" data-wow-offset="200"</em></p>
+
+    <h3>tada</h3>
+    <img class="wow tada" data-wow-offset="100" src="images/icon1.png" alt="">
+    <p><em>class="wow tada" data-wow-offset="200"</em></p>
+
+    <h3>rotateIn</h3>
+    <img class="wow rotateIn" data-wow-offset="100" src="images/icon2.png" alt="">
+    <p><em>class="wow rotateIn" data-wow-offset="200"</em></p>
+
+</div>
+</body>
+</html>
+<!--
+                          Как скачать и подключить.
+
+1 шаг. Скачать скрипты wow.js и animate.css с официальных сайтов и разместить их в папке своего проекта.
+
+2 шаг. Подключаем скрипты простым HTML кодом на странице в теге <head> :
+
+    <link rel="stylesheet" href="animate.min.css">
+    <script src="wow.min.js"></script>
+
+3 шаг. Необходимо инициализировать скрипт добавив вот такой код, сразу после его подключения:
+
+    <script>
+        new WOW().init();
+    </script>
+
+                              Использование WOW.js
+
+Шаг 1. Выбираем элемент, который хотим анимировать и добавляем ему класс class="wow".
+    <img class="wow" src="images/dog1.jpg">
+
+Шаг 2. Выбираем анимацию, и добавляем её дополнительным классом к нашей собачке:
+    <img class="wow zoomInUp" src="images/dog1.jpg">
+
+Шаг 3. Добавляем настройки для анимации если надо, при помощи специальных data-атрибутов :
+    <img class="wow zoomInUp"
+            data-wow-offset="200"
+            data-wow-delay="0.5s"
+            data-wow-duration="2s"
+            src="images/dog1.jpg">
+
+В коде выше я указал, что анимация должна срабатывать, когда картинка пройдет 200 пикселей от низа экрана.
+Но при этом у нее будет задержка в пол секунды, а сама анимация будет занимать по времени ровно 2 секунды.
+
+                        Настройки WOW.js анимации через атрибуты
+
+    data-wow-duration – указываем время проигрывания анимации
+    data-wow-delay – ставим задержку перед проигрыванием анимации
+    data-wow-offset – включение анимации, когда элемент проходит определнное количество пикселей от низа экрана
+    data-wow-iteration – количество повторов анимации
+
+Обращаю ваше внимание на то, что эти атрибуты не обязательные. Если вы их не укажете, анимация будет просто
+проигрываться по умолчанию, как только элемент появится на экране при прокрутке окна браузера.
+
+-->
